@@ -10,22 +10,22 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-    int c, i;
+	int c, i;
 
-    c=0;
+	c = 0;
 
-    /* Find size of dest  array*/
-    while (dest[c])
-        c++;
-        
-   /**
+	/*find size of dest array*/
+	while (dest[c])
+		c++;
+
+	/**
 	 * src does not need to be null terminated
 	 * if it contains n or more bytes
 	*/
-    for (i = 0; i < n && src[i] != '\0'; i++)
-        dest[c + i] = src[i];
-        /*null terminate dest*/
-        dest[c + i] = '\0';
+	for (i = 0; i < n && src[i] != '\0'; i++)
+		dest[c + i] = src[i];
+	/*null terminate dest*/
+	dest[c + i] = '\0';
 
-        return (dest);
+	return (dest);
 }
